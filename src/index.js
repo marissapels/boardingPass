@@ -1,14 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { App } from './components/App'
-import { Router, Route, hashHistory } from 'react-router'
+import { HashRouter, Route } from 'react-router-dom'
 
 window.React = React
 
 render(
-<Router history={hashHistory}>
-  <Route path="/" component={App}/>
-  </Router>,
+  <HashRouter>
+    <div>
+      <Route exact path="/" component={App} />
+    </div>
+  </HashRouter >
+,
   document.getElementById('react-container')
 )
 
