@@ -1,4 +1,4 @@
-// AIzaSyC_HnyU9A0yrqVniL2VKwUq0E1t0ATOc7A
+// AIzaSyD0grZOXrVTXdPcZWuH5bIY8uP6_CiAxfc
 
 import React from "react";
 import { Component } from "react";
@@ -14,7 +14,7 @@ import {
 const MyMapComponent = compose(
   withProps({
     googleMapURL:
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyC_HnyU9A0yrqVniL2VKwUq0E1t0ATOc7A&v=3.exp&libraries=geometry,drawing,places",
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0grZOXrVTXdPcZWuH5bIY8uP6_CiAxfc&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: '100%' }} />,
     containerElement: <div style={{ height: '400px' }} />,
     mapElement: <div style={{ height: '100%' }} />
@@ -31,24 +31,23 @@ const MyMapComponent = compose(
   </GoogleMap>
 ));
 
-export class MyFancyComponent extends Component {
+export class MapView extends Component {
   state = {
-    isMarkerShown: false,
+    isMarkerShown: true,
   }
 
-  componentDidMount() {
-    this.delayedShowMarker()
-  }
+  // componentDidMount() {
+  //   this.delayedShowMarker()
+  // }
 
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
+  // delayedShowMarker = () => {
+  //   setTimeout(() => {
+  //     this.setState({ isMarkerShown: true })
+  //   }, 3000)
+  // }
 
   handleMarkerClick = () => {
     this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
   }
 
   render() {
