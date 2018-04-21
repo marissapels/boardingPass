@@ -9,7 +9,7 @@ window.React = React
 render(
   <HashRouter>
     <div>
-    	<Route exact path="/" component={App} />
+    	<Route exact path="/" component={MapView} />
       <Route exact path="/map" component={MapView} />
     </div>
   </HashRouter >
